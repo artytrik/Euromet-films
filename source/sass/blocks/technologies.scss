@@ -1,0 +1,127 @@
+.technologies {
+  @include back("../img/technologies.jpg");
+  color: #ffffff;
+  background-size: cover;
+  background-position: center top;
+}
+
+.technologies__wrapper {
+  max-width: 1280px;
+  padding: 70px;
+  padding-bottom: 97px;
+  margin: 0 auto;
+}
+
+.technologies__header {
+  margin: 0;
+  margin-bottom: 115px;
+
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.technologies__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.technologies__inner-block {
+  width: 470px;
+}
+
+.technologies__inner-header {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: bold;
+}
+
+.technologies__inner-description {
+  margin: 0;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.technologies__table {
+  width: 540px;
+  box-sizing: border-box;
+  padding: 18px 60px 0;
+  background-color: rgba($color: #182430, $alpha: 0.8);
+  border: 1px solid #677d9b;
+  border-radius: 12px;
+  margin-right: 85px;
+
+  & td {
+    border-top: 1px solid rgba($color: #e9ebee, $alpha: 0.3);
+    padding: 30px 0;
+  }
+
+  & th {
+    padding: 20px 0;
+  }
+}
+
+.technologies__table-header {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.technologies__table-header-green-text {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #659b4e;
+}
+
+.technologies__table-green-text {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: bold;
+  color: #659b4e;
+  margin-right: 20px;
+}
+
+.technologies__table-text {
+  display: inline-block;
+  width: 80px;
+  @include font(16px, normal, 18px, #ffffff);
+}
+
+.technologies__link-list {
+  @include clear-ul;
+  max-width: 1280px;
+  padding: 0 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.technologies__link-list-item {
+  margin-right: 100px;
+  padding: 30px 0 40px;
+}
+
+.technologies__link-list-text {
+  @include font(24px, normal, 48px, #16aeed);
+  border-bottom: 2px dotted #16aeed;
+
+  &--active {
+    color: #ffffff;
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: #ffffff;
+    border-bottom: none;
+  }
+}
+
+.technologies__link-wrapper {
+  border-top: 1px solid #4b5966;
+}

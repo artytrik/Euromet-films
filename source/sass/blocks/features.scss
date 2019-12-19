@@ -1,0 +1,42 @@
+.features {
+  background-color: #ffffff;
+}
+
+.features__wrapper {
+  max-width: 1280px;
+  padding: 90px 70px;
+  margin: 0 auto;
+}
+
+.features__header {
+  margin: 0;
+  margin-bottom: 60px;
+  width: 50%;
+
+  @include font(48px, bold, 60px);
+}
+
+.features__list {
+  @include clear-ul;
+
+  display: flex;
+}
+
+.features__list-item {
+  width: 30%;
+  margin-right: 5%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.features__list-item-image-wrapper {
+  height: 266px;
+  margin-bottom: 33px;
+}
+
+.features__list-item-description {
+  margin: 0;
+  @include font(19px, 300, 30px);
+}

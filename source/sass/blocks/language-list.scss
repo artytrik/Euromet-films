@@ -1,0 +1,30 @@
+.language-list {
+  @include clear-ul;
+
+  display: flex;
+  margin-top: 30px;
+}
+
+.language__list-item {
+  margin-right: 5px;
+}
+
+.language__list-item-link {
+  display: block;
+  padding: 8px;
+  color: #e2effa;
+  font-size: 14px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.language__list-item-link--active {
+  color: #659b4e;
+
+  border: 1px solid #677d9b;
+  border-radius: 2px;
+}
