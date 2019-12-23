@@ -105,8 +105,25 @@
   }
 }
 
-.kinds__list-tem-link {
+.kinds__list-item-link {
+  display: block;
+  color: #1e3042;
+  font-weight: 500;
+
+  &:active,
+  &:focus,
+  &:hover .kinds__list-item-header {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:focus,
+  &:hover .kinds__list-item-description {
+    opacity: 0.7;
+  }
+}
+
+.kinds__list-item-link--catalog {
   color: #16aeed;
   text-decoration: underline;
-  font-weight: 500;
 }
