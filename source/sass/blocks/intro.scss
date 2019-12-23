@@ -117,6 +117,7 @@
     height: 113px;
 
     @include back("../img/play.png");
+    transition-duration: 1s;
   }
 
   cursor: pointer;
@@ -124,6 +125,7 @@
   &:hover {
     &::after {
       transform: translate(-50%, -50%) scale(1.2);
+      transition-duration: 1s;
     }
   }
 }
