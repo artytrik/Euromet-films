@@ -1,0 +1,36 @@
+.sertificate__wrapper {
+  max-width: 1280px;
+  padding: 30px 70px;
+  margin: 0 auto;
+}
+
+.sertificate__header {
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include font(60px, bold, 72px, #182430);
+}
+
+.sertificate__list {
+  @include clear-ul;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sertificate__item {
+  margin-bottom: 70px;
+}
+
+.sertificate__image-wrapper {
+  width: 331px;
+  height: 483px;
+  padding: 35px;
+  border: 1px solid #ccd3db;
+}
+
+.sertificate__item-header {
+  text-align: center;
+  @include font(21px, bold, 24px, #1e3042);
+}
