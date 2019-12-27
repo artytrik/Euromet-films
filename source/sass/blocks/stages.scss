@@ -1,0 +1,37 @@
+.stages__wrapper {
+  max-width: 1280px;
+  padding: 50px 70px;
+  margin: 0 auto;
+}
+
+.stages__header {
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include font(68px, bold, 72px);
+}
+
+.stages__list {
+  @include clear-ul;
+  justify-content: space-between;
+
+  display: flex;
+}
+
+.stages__item {
+  width: 20%;
+}
+
+.stages__item-header {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font(60px, bold, 72px, #70b652);
+}
+
+.stages__item-description {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font(19px, 300, 30px, #1e3042);
+}

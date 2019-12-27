@@ -1,0 +1,35 @@
+.about-technologies__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 70px;
+}
+
+.about-technologies__header {
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include font(60px, bold, 72px, #182430);
+}
+
+.about-technologies__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  border-radius: 2px;
+}
+
+.about-technologies__block:nth-of-type(2n - 1) .about-technologies__image-wrapper {
+  order: -1;
+}
+
+.about-technologies__image-wrapper {
+  width: 45%;
+  height: auto;
+  background-size: cover;
+}
+
+.about-technologies__description-block {
+  width: 45%;
+  @include font(19px, 300, 30px, #182430);
+}

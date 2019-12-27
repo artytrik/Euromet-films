@@ -1,5 +1,9 @@
 .site-list__wrapper {
   background-color: #182430;
+
+  &--inner {
+    margin-bottom: -40px;
+  }
 }
 
 .site-list {

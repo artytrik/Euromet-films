@@ -1,0 +1,26 @@
+.about-contact__wrapper {
+  max-width: 1280px;
+  padding: 185px 70px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  @include back("../img/about-contact.jpg");
+}
+
+.about-contact__description {
+  margin: 0;
+  margin-bottom: 30px;
+  @include font(19px, 300, 30px, #ffffff);
+}
+
+.about-contact__inner-wrapper {
+  margin-left: auto;
+  margin-right: 150px;
+  width: 500px;
+}
+
+.about-contact__button {
+  font-size: 20px;
+  width: 260px;
+  height: 65px;
+}
