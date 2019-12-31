@@ -49,13 +49,13 @@
             <a href="about.html" class="site-list__item-link">О компании</a>
           </li>
           <li class="site-list__item">
-            <a href="sertificate.html" class="site-list__item-link site-list__item-link--active">Сертификация</a>
+            <a href="sertificate.html" class="site-list__item-link">Сертификация</a>
           </li>
           <li class="site-list__item">
             <a href="news.html" class="site-list__item-link">Новости</a>
           </li>
           <li class="site-list__item">
-            <a href="contacts.html" class="site-list__item-link">Контакты</a>
+            <a href="contacts.html" class="site-list__item-link site-list__item-link--active">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -66,51 +66,53 @@
       <div class="breadcrumbs__wrapper">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
-          <li class="breadcrumbs__item"><a href="sertificate.html" class="breadcrumbs__link breadcrumbs__link--active">Сертификация</a></li>
+          <li class="breadcrumbs__item"><a href="contacts.html" class="breadcrumbs__link breadcrumbs__link--active">Контакты</a></li>
         </ul>
       </div>
     </section>
-    <section class="sertificate">
-      <div class="sertificate__wrapper">
-        <h2 class="sertificate__header">Сертификация</h2>
-      <ul class="sertificate__list">
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-        <li class="sertificate__item">
-          <a href="img/sertificate.jpg" class="sertificate__link">
-            <div class="sertificate__image-wrapper"><img src="img/sertificate.jpg" alt="Сертификат" class="sertificate__image"></div>
-          </a>
-          <h3 class="sertificate__item-header">Сертификат BRC</h3>
-        </li>
-      </ul>
+    <section class="contacts-page">
+      <div class="contacts-page__wrapper">
+        <h2 class="contacts-page__header">Контакты</h2>
+      </div>
+      <div class="contacts-page__map" id="map-canvas">
+        <div class="contacts-page__map-block">
+          <h3 class="contacts-page__block-header">Головной офис компании</h3>
+          <p class="contacts-page__block-description">Москва, пр-кт Мира, д.33, к.1, ТОЦ Олимпик Плаза I</p>
+          <div class="contacts-page__map-block-inner">
+            <h4>телефон</h4>
+            <span class="contacts-page__block-description">+ 7-495-937-8158</span><span class="contacts-page__block-description">+ 7-495-937-8159</span>
+          </div>
+          <div class="contacts-page__map-block-inner">
+            <h4>факс</h4>
+            <span class="contacts-page__block-description">+ 7-495-937-8160</span>
+          </div>
+          <a href="#" class="contacts-page__block-link">производственная база</a>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae5e4fdfc786ff2a2b711b27123ca0fd074cf049ce54816a4892e932a9824f556&amp;source=constructor" width="100%" height="700" frameborder="0"></iframe>
+      </div>
+      <div class="contacts-page__wrapper contacts-page__wrapper--down">
+        <div class="contacts-page__contact-block">
+          <div class="contacts-page__mail-block">
+            <h3 class="contacts-page__mail-block-header">Соискателям</h3>
+            <p class="contacts-page__mail-block-description">Мы всегда стремимся к совершенству,
+              а для этого нам нужны лучшие специалисты. Отправьте свое резюме
+              и мы свяжемся с вами в ближайшее время.</p>
+            <h4>Напишите нам</h4>
+            <a href="mailto:support@eurometfilms.ru" class="contacts-page__mail-block-link">support@eurometfilms.ru</a>
+          </div>
+          <div class="contacts-page__form-block">
+            <h3 class="contacts-page__form-header">Связаться с нами</h3>
+            <form action="submit" class="contacts-page__form">
+              <input type="text" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваше имя">
+              <input type="text" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваш телефон">
+              <input type="text" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваше сообщение">
+              <button class="contacts-page__form-element contacts-page__form-button contacts-page__form-button--add button">Прикрепить файл</button>
+              <p class="contacts-page__form-element contacts-page__form-description">Нажимая на кнопку  “Отправить” Я даю согласие
+                на обработку персональных данных</p>
+              <button class="contacts-page__form-element button contacts-page__form-button contacts-page__form-button--send">Отправить</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -127,13 +129,13 @@
           <a href="about.html" class="site-list__item-link">О компании</a>
         </li>
         <li class="site-list__item">
-          <a href="sertificate.html" class="site-list__item-link site-list__item-link--active">Сертификация</a>
+          <a href="sertificate.html" class="site-list__item-link">Сертификация</a>
         </li>
         <li class="site-list__item">
           <a href="news.html" class="site-list__item-link">Новости</a>
         </li>
         <li class="site-list__item">
-          <a href="contacts.html" class="site-list__item-link">Контакты</a>
+          <a href="contacts.html" class="site-list__item-link site-list__item-link--active">Контакты</a>
         </li>
       </ul>
     </nav>
