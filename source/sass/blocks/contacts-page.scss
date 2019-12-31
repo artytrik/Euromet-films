@@ -1,0 +1,145 @@
+.contacts-page__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 70px 0;
+
+  &--down {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+}
+
+.contacts-page__header {
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include font(60px, bold, 72px, #182430);
+}
+
+.contacts-page__map {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.contacts-page__map-block {
+  position: absolute;
+  padding: 67px;
+  width: 25%;
+  max-width: 464px;
+
+  top: 80px;
+  right: 13%;
+
+  z-index: 2;
+  background-color: white;
+}
+
+.contacts-page__block-header {
+  margin: 0;
+  margin-bottom: 20px;
+  @include font(24px, bold, 30px, #010101);
+}
+
+.contacts-page__block-description {
+  display: block;
+  margin: 0;
+  @include font(19px, normal, 30px, black);
+}
+
+.contacts-page__map-block h4 {
+  margin: 0;
+  @include font(14px, normal, 30px, #929292);
+  text-transform: uppercase;
+}
+
+.contacts-page__block-link {
+  @include font(18px, bold, 30px, #659b4e);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.contacts-page__contact-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-page__mail-block {
+  width: 34%;
+  padding: 44px 54px 84px 44px;
+  border: 10px solid #659b4e;
+}
+
+.contacts-page__mail-block-header {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 36px;
+  color: #182430;
+}
+
+.contacts-page__mail-block-description {
+  margin: 0;
+  margin-bottom: 30px;
+  @include font(19px, 300, 30px, black);
+}
+
+.contacts-page__mail-block h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  @include font(19px, bold, 30px, black);
+}
+
+.contacts-page__mail-block-link {
+  @include font(22px, bold, 36px, #659b4e);
+}
+
+.contacts-page__form-header {
+  margin: 0;
+  @include font(60px, bold, 72px, #182430);
+}
+
+.contacts-page__form-block {
+  width: 50%;
+}
+
+.contacts-page__form-element {
+  width: 45%;
+  margin-bottom: 45px;
+}
+
+.contacts-page__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contacts-page__form-input {
+  padding: 20px 10px 20px 0;
+  border: none;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.contacts-page__form-description {
+  margin: 0;
+  @include font(12px, 300, 18px, #a3a3a3);
+}
+
+.contacts-page__form-button {
+  border-radius: 1px;
+
+  &--add {
+    background-color: white;
+    color: #659b4e;
+    background-color: #fff;
+    border: 1px solid #659b4e;
+    @include font(18px, 500);
+    text-align: left;
+    padding: 17px 27px 17px 27px;
+  }
+
+  &--send {
+    padding: 15px;
+    @include font(20px, 500);
+  }
+}
+
