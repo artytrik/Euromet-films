@@ -1,0 +1,33 @@
+.pagination {
+  @include clear-ul;
+
+  display: flex;
+}
+
+.pagination__item {
+  margin-right: 15px;
+}
+
+.pagination__link {
+  display: block;
+  border: 1px solid #dae5f3;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  padding-top: 13px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  @include font(17px, 300, 24px, $black);
+
+  &--active {
+    background-color: $black;
+    color: white;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $green;
+    color: white;
+  }
+}
