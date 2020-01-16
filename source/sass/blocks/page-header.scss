@@ -73,20 +73,31 @@
   .page-header__description {
     display: none;
   }
+
+  .page-header__contacts {
+    margin-top: 25px;
+  }
 }
 
 @include mobile {
   .page-header__wrapper {
     max-width: $min-mobile-width;
     padding: 30px 20px;
+    box-sizing: border-box;
   }
 
   .page-header__toggle {
     margin-top: 0;
     width: 34px;
     height: 24px;
+    margin-bottom: 5px;
 
     @include back("../img/mobile-menu.png");
+  }
+
+  .page-header__contacts {
+    margin-right: 7px;
+    margin-bottom: 7px;
   }
 
   .page-header__logo-wrapper {

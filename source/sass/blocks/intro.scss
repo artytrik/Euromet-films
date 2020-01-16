@@ -133,16 +133,18 @@
 
 @include tablet {
   .intro__wrapper {
-    padding: 200px 70px 90px;
+    padding: 225px 70px 85px;
   }
 
   .intro__header {
     @include font(60px, bold, 72px, #ffffff);
+    margin-bottom: 30px;
   }
 
   .intro__description {
     @include font(24px, 300, 36px);
     width: 300px;
+    margin-bottom: 35px;
   }
 
   .intro__big-video-wrapper {
@@ -189,6 +191,10 @@
       margin-right: 0;
     }
   }
+
+  .intro__about-button {
+    margin-bottom: 60px;
+  }
 }
 
 @include mobile {
@@ -197,7 +203,7 @@
   }
 
   .intro__wrapper {
-    padding: 140px 20px;
+    padding: 156px 20px 40px;
     max-width: $min-mobile-width;
     margin: 0 auto;
   }
@@ -206,14 +212,14 @@
     font-size: 30px;
     line-height: 36px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
   }
 
   .intro__description {
     @include font(18px, 300, 24px);
 
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: center;
     width: 240px;
   }
@@ -221,12 +227,11 @@
   .intro__about-button {
     margin: 0 auto;
     width: 210px;
-    height: 55px;
+    height: 65px;
+    margin-bottom: 30px;
   }
 
   .intro__video {
-    margin-top: 20px;
-    margin-bottom: 50px;
     width: 215px;
     height: 215px;
   }
@@ -240,10 +245,11 @@
     position: relative;
     width: 220px;
     margin: 0 auto;
+    margin-bottom: 32px;
   }
 
   .intro__list {
-    width: 260px;
+    width: 90%;
     margin: 0 auto;
     flex-direction: column;
   }

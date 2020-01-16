@@ -66,9 +66,18 @@
     width: 50%;
   }
 
+  .page-footer .contacts {
+    margin-top: 15px;
+    width: 50%;
+  }
+
   .contacts__list {
     justify-content: flex-end;
     width: 220px;
+  }
+
+  .page-footer .contacts__list {
+    margin: 0;
   }
 
   .contacts__list-item {
@@ -93,11 +102,50 @@
 }
 
 @include mobile {
+  .page-footer .contacts {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 28px;
+  }
+
   .contacts__list {
     display: none;
   }
 
-  .contacts__button {
+  .page-footer__contacts .contacts__list {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contacts__list-item {
+    width: 100%;
+  }
+
+  .page-footer .contacts__button-text {
+    display: inline;
+  }
+
+  .page-footer .contacts__button {
+    position: relative;
+    width: 218px;
+    height: 55px;
+    padding-left: 32px;
+
+    &::before {
+      @include pseudo;
+
+      top: 18px;
+      left: 11%;
+
+      width: 14px;
+      height: 20px;
+
+      @include back("../img/iphone.png");
+    }
+  }
+
+  .page-header .contacts__button {
     width: 50px;
     height: 50px;
     background-color: transparent;

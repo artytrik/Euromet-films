@@ -27,3 +27,66 @@
 .page-footer__contacts {
   align-items: center;
 }
+
+.page-footer__copyright-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px 70px;
+  @include font(14px, 300, 18px, #6f7c8b);
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__copyright {
+  border-top: 1px solid #6f7c8b;
+}
+
+@include tablet {
+  .page-footer__wrapper {
+    padding: 35px 70px;
+  }
+
+  .page-footer__inner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .page-footer__description {
+    margin-top: 35px;
+    width: 95%;
+    order: 1;
+  }
+}
+
+@include mobile {
+  .page-footer__copyright-wrapper {
+    flex-direction: column;
+  }
+
+  .page-footer__logo-wrapper {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .page-footer__wrapper {
+    padding: 35px 20px 40px;
+    width: $min-mobile-width;
+    box-sizing: border-box;
+  }
+
+  .page-footer__description {
+    order: 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-footer__copyright-wrapper {
+    padding: 20px 20px;
+    width: 65%;
+    text-align: center;
+  }
+
+  .page-footer__copyright-text {
+    margin-bottom: 20px;
+  }
+}

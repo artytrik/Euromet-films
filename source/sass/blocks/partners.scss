@@ -1,6 +1,6 @@
 .partners__wrapper {
   max-width: 1280px;
-  padding: 20px 70px 90px;
+  padding: 20px 70px 70px;
   margin: 0 auto;
 }
 
@@ -15,7 +15,9 @@
   @include clear-ul;
 
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 }
 
 .about-technologies .partners__list {
@@ -23,9 +25,54 @@
 }
 
 .partners__list-item {
-  width: 25%;
+  width: 22%;
   margin-right: 2%;
   height: 115px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 
   border: 1px solid #dae5f3;
+}
+
+@include desktop-only {
+  .partners__list-item:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+@include tablet {
+  .partners__wrapper {
+    padding: 0 70px 40px;
+    box-sizing: border-box;
+  }
+
+  .partners__header {
+    margin-bottom: 30px;
+  }
+
+  .partners__list-item {
+    width: 47%;
+    margin-right: 3%;
+  }
+
+  .partners__list-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@include mobile {
+  .partners__wrapper {
+    padding: 0 20px 14px;
+    width: $min-mobile-width;
+  }
+
+  .partners__header {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .partners__list-item {
+    height: 50px;
+    margin-bottom: 10px;
+  }
 }

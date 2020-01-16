@@ -24,6 +24,10 @@
 
 .target__image-wrapper {
   width: 100%;
+  height: 600px;
+  @include back("../img/target.jpg");
+  background-size: cover;
+  overflow: hidden;
 }
 
 .target__description-block {
@@ -106,12 +110,13 @@
   .target__wrapper {
     position: relative;
     margin-bottom: 800px;
+    padding: 55px 70px 70px;
   }
 
   .target__description-block {
-    bottom: -950px;
-    width: 620px;
-    padding: 40px;
+    bottom: -1050px;
+    width: 82%;
+    padding: 40px 40px 20px;
 
     right: 50%;
     transform: translateX(50%);
@@ -120,33 +125,46 @@
   .target__image-wrapper {
     position: absolute;
 
-    top: 250px;
+    top: 225px;
     left: 0;
+    background-position: 16% center;
   }
 
   .target__video-wrapper {
-    top: 50%;
+    top: 400px;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 0);
+
+    &:before {
+      top: 35px;
+      transform: translate(-50%, 0);
+    }
+
+    &:after {
+      top: 58px;
+      transform: translate(-50%, 0);
+    }
   }
 }
 
 @include mobile {
   .target__wrapper {
-    padding: 40px 20px;
-    margin: 0;
+    padding: 40px 20px 30px;
+    margin: 0 auto;
     width: $min-mobile-width;
+    box-sizing: border-box;
   }
 
   .target__header {
     font-size: 30px;
     line-height: 36px;
-    margin-bottom: 390px;
+    margin-bottom: 382px;
   }
 
   .target__image-wrapper {
-    top: 180px;
+    top: 175px;
     width: 320px;
+    height: 330px;
   }
 
   .target__image-wrapper img {
@@ -172,6 +190,11 @@
   .target__description {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .target__video-wrapper {
