@@ -8,9 +8,12 @@
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--closed">
     <div class="page-header__wrapper">
       <div class="page-header__inner-wrapper">
+        <button class="page-header__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <div class="page-header__logo-wrapper">
           <a href="index.html" class="page-header__logo-link">
             <img src="img/logo.png" alt="Euromet Films" class="page-header__logo">
@@ -34,7 +37,11 @@
               <a href="tel:8(495)9378159" class="contacts__list-item-link">+7 (495) 937-81-59</a>
             </li>
           </ul>
-          <button type="button" class="contacts__button button">Обратный звонок</button>
+          <button type="button" class="contacts__button button">
+            <span class="contacts__button-text">
+              Обратный звонок
+            </span>
+          </button>
         </div>
       </div>
       <nav class="site-list__wrapper">
@@ -67,6 +74,11 @@
         <h1 class="intro__header">ЕврометФилмз</h1>
         <p class="intro__description">современная динамичная компания, реализующая полимерные упаковочные материалы</p>
         <button type="button" class="button intro__about-button">О технологии</button>
+        <div class="intro__video-wrapper">
+          <div class="intro__big-video-wrapper">
+            <video src="#" class="intro__video"></video>
+          </div>
+        </div>
         <ul class="intro__list">
           <li class="intro__list-item">
             <div class="intro__list-item-number-wrapper">
@@ -87,11 +99,6 @@
             <p class="intro__list-item-description">полиэтиленовых (ПЭ) пленок</p>
           </li>
         </ul>
-        <div class="intro__video-wrapper">
-          <div class="intro__big-video-wrapper">
-            <video src="#" class="intro__video"></video>
-          </div>
-        </div>
       </div>
     </section>
     <section class="clients">
@@ -116,6 +123,8 @@
             <div class="clients__list-item-image-wrapper"><img src="" alt="Клиент-6" class="clients__list-item-image"></div>
           </li>
         </ul>
+        <!--<a class="clients__control clients__control--left" href="#" role="button"></a>
+        <a class="clients__control clients__control--right" href="#" role="button"></a>-->
       </div>
     </section>
     <section class="target">
@@ -266,7 +275,7 @@
         </ul>
       </div>
     </section>
-    <section class="partners">
+    <!--<section class="partners">
       <div class="partners__wrapper">
         <h2 class="partners__header">Наши партнеры</h2>
         <ul class="partners__list">
@@ -284,9 +293,9 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section>-->
   </main>
-  <footer class="page-footer">
+  <!--<footer class="page-footer">
     <nav class="site-list__wrapper">
       <ul class="page-header__site-list site-list">
         <li class="site-list__item">
@@ -333,6 +342,7 @@
         <span class="page-footer__copyright-text">2019 © ЗАО «Еврометфилмз». Все права защищены.</span>
         <span class="page-footer__copyright-polytics">Политика конфиденциальности</span></div>
     </div>
-  </footer>
+  </footer>-->
+  <script src="js/index.js"></script>
 </body>
 </html>

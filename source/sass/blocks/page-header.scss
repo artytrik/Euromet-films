@@ -23,6 +23,10 @@
   margin-bottom: 50px;
 }
 
+.page-header__toggle {
+  display: none;
+}
+
 .page-header__logo-wrapper {
   width: 180px;
   height: 71px;
@@ -43,4 +47,50 @@
 .page-header__contacts {
   align-items: center;
   margin-top: 30px;
+}
+
+@include tablet {
+  .page-header__wrapper {
+    padding: 50px 70px;
+    box-sizing: border-box;
+  }
+
+  .page-header__toggle {
+    display: block;
+    margin-top: 30px;
+
+    width: 51px;
+    height: 35px;
+    @include back("../img/tablet-menu.png");
+    background-color: transparent;
+    border: none;
+  }
+
+  .page-header__language-list {
+    display: none;
+  }
+
+  .page-header__description {
+    display: none;
+  }
+}
+
+@include mobile {
+  .page-header__wrapper {
+    max-width: $min-mobile-width;
+    padding: 30px 20px;
+  }
+
+  .page-header__toggle {
+    margin-top: 0;
+    width: 34px;
+    height: 24px;
+
+    @include back("../img/mobile-menu.png");
+  }
+
+  .page-header__logo-wrapper {
+    width: 124px;
+    height: 100;
+  }
 }

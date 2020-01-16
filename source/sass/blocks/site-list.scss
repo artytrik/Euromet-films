@@ -43,3 +43,9 @@
     opacity: 0.7;
   }
 }
+
+@include tablet {
+  .site-list__wrapper {
+    display: none;
+  }
+}

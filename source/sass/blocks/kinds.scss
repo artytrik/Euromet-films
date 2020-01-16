@@ -127,3 +127,48 @@
   color: #16aeed;
   text-decoration: underline;
 }
+
+@include tablet {
+  .kinds__wrapper {
+    padding: 190px 20px 70px;
+  }
+
+  .kinds__header {
+    width: 480px;
+  }
+
+  .kinds__list-item {
+    width: 30%;
+  }
+}
+
+@include mobile {
+  .kinds__wrapper {
+    padding: 20px 20px 70px;
+    width: $min-mobile-width;
+  }
+
+  .kinds__header {
+    width: auto;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .kinds__list-item {
+    width: 50%;
+
+    &:after,
+    &:before {
+      border: none;
+    }
+  }
+
+  .kinds__list-item-description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .kinds__list-item-header {
+    font-size: 48px;
+  }
+}
