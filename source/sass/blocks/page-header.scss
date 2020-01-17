@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .page-header__toggle {
@@ -55,6 +55,10 @@
     box-sizing: border-box;
   }
 
+  .page-header__inner-wrapper {
+    margin-bottom: 25px;
+  }
+
   .page-header__toggle {
     display: block;
     margin-top: 30px;
@@ -82,8 +86,12 @@
 @include mobile {
   .page-header__wrapper {
     max-width: $min-mobile-width;
-    padding: 30px 20px;
+    padding: 30px 20px 20px;
     box-sizing: border-box;
+  }
+
+  .page-header__inner-wrapper {
+    margin-bottom: 0;
   }
 
   .page-header__toggle {

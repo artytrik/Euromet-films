@@ -1,7 +1,7 @@
 .breadcrumbs__wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 50px 70px;
+  padding: 50px 70px 30px;
 }
 
 .breadcrumbs__list {
@@ -12,13 +12,13 @@
 
 .breadcrumbs__item {
   position: relative;
-  margin-right: 30px;
+  margin-right: 35px;
 
   &:after {
     position: absolute;
 
-    top: 2px;
-    right: -15px;
+    top: 3px;
+    right: -20px;
 
     content: "-";
     @include font(14px, 300);
@@ -40,5 +40,17 @@
 
   &--active {
     color: #a1a5a8;
+  }
+}
+
+@include tablet {
+  .breadcrumbs__wrapper {
+    padding: 35px 70px 20px;
+  }
+}
+
+@include mobile {
+  .breadcrumbs__wrapper {
+    padding: 20px 20px 15px;
   }
 }
