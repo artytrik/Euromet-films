@@ -24,3 +24,38 @@
   width: 260px;
   height: 65px;
 }
+
+@include tablet {
+  .about-contact__wrapper {
+    padding: 60px 70px;
+  }
+
+  .about-contact__inner-wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .about-contact__description {
+    margin-bottom: 35px;
+  }
+}
+
+@include mobile {
+  .about-contact__wrapper {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .about-contact__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about-contact__inner-wrapper {
+    width: 80%;
+  }
+
+  .about-contact__button {
+    width: 100%;
+  }
+}
