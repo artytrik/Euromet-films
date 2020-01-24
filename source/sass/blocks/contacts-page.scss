@@ -1,7 +1,7 @@
 .contacts-page__wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px 70px 0;
+  padding: 0 70px;
 
   &--down {
     padding-top: 100px;
@@ -11,7 +11,7 @@
 
 .contacts-page__header {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 62px;
 
   @include font(60px, bold, 72px, #182430);
 }
@@ -24,12 +24,12 @@
 
 .contacts-page__map-block {
   position: absolute;
-  padding: 67px;
-  width: 25%;
+  padding: 65px 60px;
+  width: 18%;
   max-width: 464px;
 
   top: 80px;
-  right: 13%;
+  right: 16%;
 
   z-index: 2;
   background-color: white;
@@ -37,14 +37,19 @@
 
 .contacts-page__block-header {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   @include font(24px, bold, 30px, #010101);
+  text-transform: uppercase;
 }
 
 .contacts-page__block-description {
   display: block;
   margin: 0;
   @include font(19px, normal, 30px, black);
+
+  &--address {
+    margin-bottom: 32px;
+  }
 }
 
 .contacts-page__map-block h4 {
@@ -59,20 +64,24 @@
   text-decoration: underline;
 }
 
+.contacts-page__map-block-inner {
+  margin-bottom: 30px;
+}
+
 .contacts-page__contact-block {
   display: flex;
   justify-content: space-between;
 }
 
 .contacts-page__mail-block {
-  width: 34%;
-  padding: 44px 54px 84px 44px;
+  width: 25%;
+  padding: 40px 50px 84px 45px;
   border: 10px solid #659b4e;
 }
 
 .contacts-page__mail-block-header {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 36px;
   color: #182430;
 }
@@ -80,7 +89,7 @@
 .contacts-page__mail-block-description {
   margin: 0;
   margin-bottom: 30px;
-  @include font(19px, 300, 30px, black);
+  @include font(17px, 300, 30px, black);
 }
 
 .contacts-page__mail-block h4 {
@@ -89,22 +98,34 @@
   @include font(19px, bold, 30px, black);
 }
 
+.contacts-page h4 {
+  margin: 0;
+  @include font(17px, bold, 30px, black);
+}
+
 .contacts-page__mail-block-link {
   @include font(22px, bold, 36px, #659b4e);
 }
 
 .contacts-page__form-header {
   margin: 0;
+  margin-top: -11px;
+  margin-bottom: 75px;
   @include font(60px, bold, 72px, #182430);
 }
 
 .contacts-page__form-block {
-  width: 50%;
+  width: 58.5%;
 }
 
 .contacts-page__form-element {
   width: 45%;
   margin-bottom: 45px;
+
+  &:first-child,
+  &:nth-child(2) {
+    margin-bottom: 95px;
+  }
 }
 
 .contacts-page__form {
@@ -117,6 +138,11 @@
   padding: 20px 10px 20px 0;
   border: none;
   border-bottom: 1px solid #a3a3a3;
+  @include font(20px, bold, 24px, black);
+
+  &::placeholder {
+    @include font(16px, 300, 20px, #a3a3a3);
+  }
 }
 
 .contacts-page__form-description {
@@ -141,5 +167,9 @@
     padding: 15px;
     @include font(20px, 500);
   }
+}
+
+@include tablet {
+  .contacts-page__wrapper {}
 }
 
