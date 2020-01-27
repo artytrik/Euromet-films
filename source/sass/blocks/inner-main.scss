@@ -1,3 +1,17 @@
-.inner-main {
+.inner-main__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 70px 65px;
+}
 
+.inner-main__header {
+  margin: 0;
+  margin-bottom: 48px;
+
+  @include font(60px, bold, 72px, #182430);
+}
+
+.inner-main__catalog-wrapper {
+  display: flex;
+  justify-content: space-between;
 }

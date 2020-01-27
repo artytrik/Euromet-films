@@ -1,0 +1,31 @@
+.films-list {
+  @include clear-ul;
+
+  width: 20%;
+}
+
+.films-list__item {
+  margin-bottom: 20px;
+}
+
+.films-list__link {
+  display: block;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  @include font(20px, 500, 30px, $green);
+
+  &--active {
+    color: $black
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.films-list__description {
+  margin: 0;
+
+  @include font(14px, normal, 18px, #959595);
+}
