@@ -108,8 +108,20 @@
     margin-top: 28px;
   }
 
-  .contacts__list {
+  .page-header .contacts__list {
     display: none;
+  }
+
+  .page-header--opened .contacts__list {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 355px;
+    left: 60px;
+  }
+
+  .page-header .contacts__list-item-link {
+    font-size: 18px;
   }
 
   .page-footer__contacts .contacts__list {

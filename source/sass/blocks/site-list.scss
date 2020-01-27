@@ -45,7 +45,43 @@
 }
 
 @include tablet {
-  .site-list__wrapper {
+  .page-footer .site-list {
     display: none;
+  }
+
+  .page-header .site-list {
+    display: none;
+  }
+
+  .page-header--opened .site-list {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    padding: 70px;
+    padding-top: 160px;
+    width: 50%;
+  }
+
+  .site-list__item {
+    width: 100%;
+    margin-bottom: 15px;
+    border-right: none;
+  }
+
+  .site-list__item-link {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@include mobile {
+  .page-header--opened .site-list {
+    width: 87%;
+    padding: 115px 60px 150px;
   }
 }

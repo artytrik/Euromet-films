@@ -79,6 +79,7 @@
 }
 
 .intro__big-video-wrapper {
+
   &::before {
     @include pseudo-top(472px, 470px, -92%, -25%);
 
@@ -133,7 +134,7 @@
 
 @include tablet {
   .intro__wrapper {
-    padding: 225px 70px 85px;
+    padding: 250px 70px 85px;
   }
 
   .intro__header {
@@ -149,9 +150,7 @@
 
   .intro__big-video-wrapper {
     &::before {
-      @include pseudo-top(240px, 240px, -25%, 15%);
-
-      @include back("../img/euro.png");
+      display: none;
     }
   }
 
@@ -160,18 +159,6 @@
 
     top: 35%;
     right: 7%;
-
-    &::before {
-      width: 98px;
-      height: 98px;
-    }
-
-    &::after {
-      width: 58px;
-      height: 58px;
-
-      @include back("../img/play.png");
-    }
 
     cursor: pointer;
 
@@ -203,7 +190,7 @@
   }
 
   .intro__wrapper {
-    padding: 156px 20px 40px;
+    padding: 206px 20px 40px;
     max-width: $min-mobile-width;
     margin: 0 auto;
   }
@@ -242,10 +229,18 @@
   }
 
   .intro__video-wrapper {
-    position: relative;
+    position: static;
     width: 220px;
     margin: 0 auto;
     margin-bottom: 32px;
+
+    &::before {
+      transform: translate(-50%, -20%);
+    }
+
+    &::after {
+      transform: translate(-50%, 0);
+    }
   }
 
   .intro__list {

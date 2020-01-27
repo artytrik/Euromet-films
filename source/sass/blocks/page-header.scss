@@ -60,6 +60,8 @@
   }
 
   .page-header__toggle {
+    position: relative;
+    z-index: 2;
     display: block;
     margin-top: 30px;
 
@@ -68,6 +70,10 @@
     @include back("../img/tablet-menu.png");
     background-color: transparent;
     border: none;
+  }
+
+  .page-header--opened .page-header__toggle {
+    @include back("../img/close.png");
   }
 
   .page-header__language-list {
@@ -85,7 +91,7 @@
 
 @include mobile {
   .page-header__wrapper {
-    max-width: $min-mobile-width;
+    max-width: $mobile-width;
     padding: 30px 20px 30px;
     box-sizing: border-box;
   }
