@@ -123,11 +123,6 @@
 .contacts-page__form-element {
   width: 48%;
   margin-bottom: 45px;
-
-  &:first-child,
-  &:nth-child(2) {
-    margin-bottom: 90px;
-  }
 }
 
 .contacts-page__form {
@@ -141,9 +136,12 @@
   border: none;
   box-sizing: border-box;
   border-bottom: 1px solid #a3a3a3;
-  @include font(20px, bold, 24px, black);
+  @include font(16px, 500, 20px, black);
+  font-family: "Ubuntu", "Arial", sans-serif;
 
   &::placeholder {
+    font-family: "Ubuntu", "Arial", sans-serif;
+
     @include font(16px, 300, 20px, #a3a3a3);
   }
 }
@@ -175,16 +173,22 @@
   height: 55px;
   padding: 10px;
 
-  &--add {
+  &--add + label {
     position: relative;
-    background-color: white;
     color: #659b4e;
+    display: inline-block;
     background-color: #fff;
     border: 1px solid #659b4e;
     @include font(18px, 500);
     text-align: left;
-    padding: 10px 25px;
+    padding: 15px 25px 10px;
+    border-radius: 1px;
+    height: 55px;
+    width: 48%;
     margin-top: 20px;
+    margin-bottom: 45px;
+    box-sizing: border-box;
+    cursor: pointer;
 
     &::before {
       @include pseudo;
@@ -197,6 +201,16 @@
 
       @include back("../img/attach.svg");
     }
+  }
+
+  &--add:focus + label,
+  &--add + label:hover {
+      opacity: 0.8;
+  }
+
+  &--add:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
   }
 
   &--send {
@@ -236,7 +250,8 @@
     flex-direction: column;
   }
 
-  .contacts-page__form-element {
+  .contacts-page__form-element,
+  .contacts-page__form-button--add + label {
     margin: 0 auto;
     width: 75%;
   }
@@ -254,7 +269,8 @@
 
   .contacts-page__form-element,
   .contacts-page__form-element:first-child,
-  .contacts-page__form-element:nth-child(2n) {
+  .contacts-page__form-element:nth-child(2n),
+  .contacts-page__form-button--add + label {
     margin-bottom: 30px;
   }
 
@@ -318,7 +334,8 @@
     margin-bottom: 25px;
   }
 
-  .contacts-page__form-element {
+  .contacts-page__form-element,
+  .contacts-page__form-button--add + label {
     width: 100%;
   }
 

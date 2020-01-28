@@ -107,14 +107,18 @@
           </div>
           <div class="contacts-page__form-block">
             <h3 class="contacts-page__form-header">Связаться с нами</h3>
-            <form action="submit" class="contacts-page__form">
-              <input type="text" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваше имя">
-              <input type="text" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваш телефон">
-              <input type="text" class="contacts-page__form-element contacts-page__form-input contacts-page__form-input--message" placeholder="Ваше сообщение">
-              <button class="contacts-page__form-element contacts-page__form-button contacts-page__form-button--add button">Прикрепить файл</button>
+            <form method="POST" enctype="multipart/form-data" class="contacts-page__form">
+              <label class="visually-hidden" for="form-name">Ваше имя</label>
+              <input type="text" id="form-name" name="form-name" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваше имя" required>
+              <label class="visually-hidden" for="">Ваш телефон</label>
+              <input type="tel" id="form-telephone" name="form-telephone" class="contacts-page__form-element contacts-page__form-input" placeholder="Ваш телефон" required>
+              <label class="visually-hidden" for="form-message">Ваше сообщение</label>
+              <textarea type="text" id="form-message" name="form-message" class="contacts-page__form-element contacts-page__form-input contacts-page__form-input--message" placeholder="Ваше сообщение" rows="1"></textarea>
+              <input type="file" id="form-file" name="form-file" class="visually-hidden contacts-page__form-element contacts-page__form-button contacts-page__form-button--add button" data-multiple-caption="Выбрано {count} файла" multiple>
+              <label for="form-file" class="contacts-page__form-element-label">Прикрепить файл</label>
               <p class="contacts-page__form-element contacts-page__form-description">Нажимая на кнопку  “Отправить” Я даю согласие
                 на обработку персональных данных</p>
-              <button class="contacts-page__form-element button contacts-page__form-button contacts-page__form-button--send">Отправить</button>
+              <button type="submit" class="contacts-page__form-element button contacts-page__form-button contacts-page__form-button--send">Отправить</button>
             </form>
           </div>
         </div>
@@ -175,6 +179,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/form.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
