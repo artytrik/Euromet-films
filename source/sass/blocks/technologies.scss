@@ -25,6 +25,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  &--hide {
+    display: none;
+  }
 }
 
 .technologies__inner-block {
@@ -109,7 +113,10 @@
 
 .technologies__link-list-text {
   @include font(24px, normal, 48px, #16aeed);
+  border: none;
   border-bottom: 2px dotted #16aeed;
+  background-color: transparent;
+  cursor: pointer;
 
   &--active {
     color: #ffffff;
