@@ -12,6 +12,16 @@ const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const del = require('del');
 const ghPages = require('gulp-gh-pages');
+const babel = require('gulp-babel');
+
+const dirs = {
+  src: 'source',
+  dest: 'build'
+}
+
+const sources = {
+  scripts: `${dirs.src}/**/*.js`
+}
 
 gulp.task('style', () => (
   gulp.src('source/sass/style.scss')
@@ -39,7 +49,7 @@ gulp.task('serve', () => {
   gulp.watch('source/img/*.svg', gulp.series('sprite', 'html', 'reload'));
   gulp.watch('source/img/**/*.{png,jpg,svg}', gulp.series('images', 'reload'));
   gulp.watch('source/*.html', gulp.series('html', 'reload'));
-  gulp.watch('source/js/**/*.js', gulp.series('copy', 'reload'));
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'reload'));
   gulp.watch('source/*.php', gulp.series('copy', 'reload'));
 });
 
@@ -75,10 +85,15 @@ gulp.task('html', () => (
     .pipe(gulp.dest('build'))
 ));
 
+gulp.task('js', () => (
+  gulp.src(sources.scripts)
+    .pipe(babel({ presets: ['@babel/preset-env']}))
+    .pipe(gulp.dest(dirs.dest))
+));
+
 gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/js/**/*.js',
     'source/*.php'
   ], {
     base: 'source'
