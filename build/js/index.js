@@ -1,10 +1,11 @@
-const pageHeader = document.querySelector(`.page-header`);
-const toggle = pageHeader.querySelector(`.page-header__toggle`);
+"use strict";
 
-const onToggleClick = (evt) => {
+var pageHeader = document.querySelector(".page-header");
+var toggle = pageHeader.querySelector(".page-header__toggle");
+
+var onToggleClick = function onToggleClick(evt) {
   evt.preventDefault();
-
-  pageHeader.classList.toggle(`page-header--opened`);
+  pageHeader.classList.toggle("page-header--opened");
 };
 
-toggle.addEventListener(`click`, onToggleClick);
+toggle.addEventListener("click", onToggleClick);

@@ -73,7 +73,7 @@
 @include mobile {
   .clients__wrapper {
     padding: 19px 40px;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
     box-sizing: border-box;
   }
 }

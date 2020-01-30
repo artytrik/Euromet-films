@@ -45,6 +45,12 @@
 }
 
 @include tablet {
+  .site-list__wrapper {
+    &--inner {
+      margin-bottom: 0;
+    }
+  }
+
   .page-footer .site-list {
     display: none;
   }
@@ -62,8 +68,8 @@
     box-sizing: border-box;
 
     padding: 70px;
-    padding-top: 160px;
-    width: 50%;
+    padding-top: 200px;
+    width: 52%;
   }
 
   .site-list__item {
@@ -76,6 +82,7 @@
     display: inline-block;
     text-align: left;
     padding: 0;
+    font-size: 24px;
   }
 }
 
@@ -83,5 +90,9 @@
   .page-header--opened .site-list {
     width: 87%;
     padding: 115px 60px 150px;
+  }
+
+  .site-list__item-link {
+    font-size: 18px;
   }
 }

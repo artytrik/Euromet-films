@@ -1,14 +1,22 @@
-const tabLinks = document.querySelectorAll(`.technologies__link-list-text`);
-const tabBlocks = document.querySelectorAll(`.technologies__inner-wrapper`);
+"use strict";
 
-const onTabClick = (tab, i) => {
-  tab.addEventListener('click', (evt) => {
+var tabLinks = document.querySelectorAll(".technologies__link-list-text");
+var tabBlocks = document.querySelectorAll(".technologies__inner-wrapper");
+
+var onTabClick = function onTabClick(tab, i) {
+  tab.addEventListener('click', function (evt) {
     evt.preventDefault();
-    tabBlocks.forEach((block) => (block.classList.add(`technologies__inner-wrapper--hide`)));
-    tabLinks.forEach((link) => (link.classList.remove(`technologies__link-list-text--active`)));
-    tabBlocks[i].classList.remove(`technologies__inner-wrapper--hide`);
-    tabLinks[i].classList.add(`technologies__link-list-text--active`);
+    tabBlocks.forEach(function (block) {
+      return block.classList.add("technologies__inner-wrapper--hide");
+    });
+    tabLinks.forEach(function (link) {
+      return link.classList.remove("technologies__link-list-text--active");
+    });
+    tabBlocks[i].classList.remove("technologies__inner-wrapper--hide");
+    tabLinks[i].classList.add("technologies__link-list-text--active");
   });
 };
 
-tabLinks.forEach((tab, i) => onTabClick(tab, i));
+tabLinks.forEach(function (tab, i) {
+  return onTabClick(tab, i);
+});

@@ -20,7 +20,7 @@ const dirs = {
 }
 
 const sources = {
-  scripts: `${dirs.src}/**/*.js`
+  scripts: `${dirs.src}/js/**/*.js`,
 }
 
 gulp.task('style', () => (
@@ -88,7 +88,7 @@ gulp.task('html', () => (
 gulp.task('js', () => (
   gulp.src(sources.scripts)
     .pipe(babel({ presets: ['@babel/preset-env']}))
-    .pipe(gulp.dest(dirs.dest))
+    .pipe(gulp.dest(`${dirs.dest}/js`))
 ));
 
 gulp.task('copy', () => (
@@ -111,6 +111,6 @@ gulp.task('deploy', () => (
   )
 );
 
-gulp.task('build', gulp.series('clean', 'sprite', gulp.parallel('copy', 'style', 'images', 'html')));
+gulp.task('build', gulp.series('clean', 'sprite', gulp.parallel('copy', 'style', 'js', 'images', 'html')));
 
 gulp.task('start', gulp.series('build', 'serve'));
