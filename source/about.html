@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Euromet Films</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
   <header class="page-header page-header--inner">
@@ -135,7 +136,7 @@
     <section class="stages">
       <div class="stages__wrapper">
         <h2 class="stages__header">Этапы развития</h2>
-        <ul class="stages__list">
+        <ul class="stages__list carousel">
           <li class="stages__item">
             <h3 class="stages__item-header">2006</h3>
             <p class="stages__item-description">ЗАО «Еврометфилмз» –
@@ -240,7 +241,10 @@
 
   <div class="modal-overlay"></div>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
