@@ -73,12 +73,12 @@
       <div class="intro__wrapper">
         <h1 class="intro__header">ЕврометФилмз</h1>
         <p class="intro__description">современная динамичная компания, реализующая полимерные упаковочные материалы</p>
-        <button type="button" class="button intro__about-button">О технологии</button>
-        <div class="intro__video-wrapper">
-          <div class="intro__big-video-wrapper">
-            <video src="#" class="intro__video"></video>
-          </div>
+        <a href="about.html" class="button intro__about-button">О компании</a>
+        <div class="intro__video-wrapper intro__video-wrapper--hide">
+          <svg class="intro__video-cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+          <iframe class="intro__video" width="560" height="315" src="https://www.youtube.com/embed/M499bwvHFzk?autoplay=" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <div class="intro__play-video-wrapper"><button type="button" class="intro__play-video"></button></div>
         <ul class="intro__list">
           <li class="intro__list-item">
             <div class="intro__list-item-number-wrapper">
@@ -137,11 +137,11 @@
           <p class="target__description">Стратегическая цель ЗАО «Еврометфилмз» - максимальная гибкость в области поставок БОПП и ПЭ пленок. В первую очередь это действующая эффективная система клиентского сервиса и контроля качества, которая позволяет нам и дальше оставаться надежным партнером для наших клиентов.</p>
           <p class="target__description">Залогом успешного развития компании мы видим постоянный творческий процесс: поиск новых оптимальных комбинаций БОПП и ПЭ пленок, инновационных рецептур сложных пленок. Наша задача - получение функциональной, безопасной, эффективной, красивой и удобной упаковки, обеспечивающей максимальное сохранение свежести, аромата и вкусовых качеств продуктов.</p>
         </div>
-        <div class="target__video-wrapper">
+        <!--<div class="target__video-wrapper">
           <div class="target__big-video-wrapper">
             <video src="#" class="target__video"></video>
           </div>
-        </div>
+        </div>-->
       </div>
     </section>
     <section class="kinds">
@@ -418,9 +418,11 @@
   </section>
 
   <div class="modal-overlay"></div>
+  <div class="modal-overlay" id="video-overlay"></div>
 
   <script src="js/index.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/video.js"></script>
 </body>
 </html>

@@ -31,6 +31,9 @@
 }
 
 .intro__about-button {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 16px;
   font-size: 20px;
   width: 245px;
   height: 65px;
@@ -78,41 +81,32 @@
   margin-bottom: 10px;
 }
 
-.intro__big-video-wrapper {
-
-  &::before {
-    @include pseudo-top(472px, 470px, -92%, -25%);
-
-    @include back("../img/euro.png");
-  }
+.intro__video {
+  width: 100%;
+  height: 100%;
 }
 
-.intro__video-wrapper {
+.intro__video-cross {
+  width: 30px;
+  height: 30px;
   position: absolute;
+  top: -10%;
+  right: -10%;
+  fill: white;
+  cursor: pointer;
+}
 
-  top: 51%;
-  right: 15%;
-
-  &::before {
-    @include pseudo;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 190px;
-    height: 190px;
-
-    background-color: #16aeed;
-    border-radius: 50%;
-    opacity: 0.5;
-  }
+.intro__play-video {
+  position: absolute;
+  border: none;
+  display: block;
+  background-color: transparent;
+  top: 45%;
+  right: 52%;
 
   &::after {
-    @include pseudo;
+    @include pseudo();
 
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 
     width: 113px;
@@ -129,6 +123,51 @@
       transform: translate(-50%, -50%) scale(1.2);
       transition-duration: 1s;
     }
+  }
+
+  &::before {
+    @include pseudo;
+
+    transform: translate(-50%, -50%);
+
+    width: 190px;
+    height: 190px;
+
+    background-color: #16aeed;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.intro__play-video-wrapper {
+  position: absolute;
+  width: 472px;
+  height: 470px;
+  top: 30%;
+  right: 10%;
+
+  @include back("../img/euro.png");
+}
+
+.intro__video-wrapper {
+  position: fixed;
+  z-index: 300;
+  display: block;
+
+  width: 70%;
+  height: 70%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  &--hide {
+    display: none;
   }
 }
 
@@ -148,10 +187,8 @@
     margin-bottom: 35px;
   }
 
-  .intro__big-video-wrapper {
-    &::before {
-      display: none;
-    }
+  .intro__play-video-wrapper {
+    display: none;
   }
 
   .intro__video-wrapper {
@@ -219,11 +256,6 @@
   }
 
   .intro__video {
-    width: 215px;
-    height: 215px;
-  }
-
-  .intro__big-video-wrapper {
     width: 215px;
     height: 215px;
   }

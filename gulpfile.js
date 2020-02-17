@@ -62,7 +62,6 @@ gulp.task('images', () => (
   gulp.src('source/img/**/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest('build/img'))
@@ -94,7 +93,8 @@ gulp.task('js', () => (
 gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/*.php'
+    'source/*.php',
+    'source/*.mp4'
   ], {
     base: 'source'
   })
