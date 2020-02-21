@@ -1,6 +1,6 @@
 .about-contact__wrapper {
   max-width: 1280px;
-  padding: 185px 70px;
+  padding: 70px;
   margin: 0 auto;
   margin-bottom: 100px;
 
@@ -10,33 +10,63 @@
 .about-contact__description {
   margin: 0;
   margin-bottom: 30px;
+  text-align: center;
   @include font(19px, 300, 30px, #ffffff);
 }
 
+.about-contact__header {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font(60px, bold, 72px, #ffffff);
+  text-align: center;
+}
+
 .about-contact__inner-wrapper {
-  margin-left: auto;
-  margin-right: 150px;
-  width: 500px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.about-contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.about-contact__element {
+  width: 30%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+.about-contact__input {
+  padding: 20px 30px;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .about-contact__button {
   font-size: 20px;
-  width: 260px;
   height: 65px;
 }
 
 @include tablet {
-  .about-contact__wrapper {
-    padding: 60px 70px;
+  .about-contact__element {
+    width: 48%;
   }
 
-  .about-contact__inner-wrapper {
-    width: 75%;
+  .about-contact__header {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .about-contact__button {
     margin: 0 auto;
-  }
-
-  .about-contact__description {
-    margin-bottom: 35px;
   }
 }
 
@@ -46,16 +76,27 @@
     margin-bottom: 30px;
   }
 
+  .about-contact__header {
+    font-size: 24px;
+  }
+
   .about-contact__description {
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
+    display: none;
   }
 
   .about-contact__inner-wrapper {
     width: 80%;
   }
 
-  .about-contact__button {
+  .about-contact__element {
+    width: 100%;
+  }
+
+  .about-contact__form {
+    flex-direction: column;
     width: 100%;
   }
 }

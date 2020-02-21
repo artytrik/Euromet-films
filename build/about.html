@@ -161,11 +161,18 @@
     </section>
     <section class="about-contact">
       <div class="about-contact__wrapper">
+        <h2 class="about-contact__header">Связаться с нами</h2>
         <div class="about-contact__inner-wrapper">
           <p class="about-contact__description">Производственная площадка расположена в г. Ступино,
             в 80 км к югу от Москвы, вблизи автомагистралей и железнодорожных путей, что значительно упрощает логистические задачи по доставке продукции
             о все регионы РФ и ближнего зарубежья. </p>
-          <button type="button" class="button about-contact__button">Связаться с нами</button>
+          <form method="POST" class="about-contact__form">
+            <input type="text" name="call-name" id="about-call-name" class="about-contact__input about-contact__element" placeholder="Ваше имя">
+            <label for="call-name" class="visually-hidden">Ваше имя</label>
+            <input type="tel" name="call-tel" id="about-call-tel" class="about-contact__input about-contact__element" placeholder="Ваш телефон">
+            <label for="call-tel" class="visually-hidden">Ваш телефон</label>
+            <button type="button" class="button about-contact__button about-contact__element">Связаться с нами</button>
+          </form>
         </div>
       </div>
     </section>
@@ -245,6 +252,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
   <script src="js/slider.js"></script>
 </body>
 </html>
