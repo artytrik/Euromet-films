@@ -29,5 +29,9 @@
   &__catalog-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 }

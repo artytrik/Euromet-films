@@ -29,3 +29,21 @@
 
   @include font(14px, normal, 18px, #959595);
 }
+
+@include tablet {
+  .films-list {
+    @include clear-ul;
+    width: 30%;
+  }
+
+  .films-list__link {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+@include mobile {
+  .films-list {
+    width: 100%;
+  }
+}

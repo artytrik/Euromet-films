@@ -66,4 +66,60 @@
 
 .items__image-wrapper {
   margin-bottom: 25px;
+  text-align: center;
+}
+
+@include tablet {
+  .items {
+    width: 60%;
+  }
+
+  .items__header {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .items__link {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .items__first-wrapper {
+    width: 100%;
+  }
+
+  .items__second-wrapper {
+    width: 100%;
+  }
+
+  .items__specs-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@include mobile {
+  .items {
+    width: 100%;
+  }
+
+  .items__header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .items__link {
+    padding: 10px;
+  }
+
+  .items__item {
+    & h4 {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    & h5, p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
 }
