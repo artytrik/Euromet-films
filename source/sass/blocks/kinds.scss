@@ -159,7 +159,7 @@
 @include mobile {
   .kinds__wrapper {
     padding: 10px 20px 75px;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
   }
 
   .kinds__header {

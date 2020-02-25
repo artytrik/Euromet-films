@@ -151,20 +151,20 @@
   .target__wrapper {
     padding: 40px 20px 30px;
     margin: 0 auto;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
     box-sizing: border-box;
   }
 
   .target__header {
     font-size: 30px;
     line-height: 36px;
-    margin-bottom: 382px;
+    margin-bottom: 30px;
   }
 
   .target__image-wrapper {
-    top: 175px;
-    width: 320px;
+    top: 0;
     height: 330px;
+    position: static;
   }
 
   .target__image-wrapper img {
@@ -176,9 +176,9 @@
     right: 0;
     transform: none;
     position: static;
-    width: 280px;
     box-shadow: none;
     padding: 0;
+    width: 100%;
   }
 
   .target__header-block {

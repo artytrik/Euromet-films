@@ -63,7 +63,7 @@
 @include mobile {
   .partners__wrapper {
     padding: 0 20px 14px;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
   }
 
   .partners__header {

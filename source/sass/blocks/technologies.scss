@@ -176,19 +176,19 @@
 @include mobile {
   .technologies__wrapper {
     padding: 35px 20px 0;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
     box-sizing: border-box;
   }
 
   .technologies__header {
-    width: 280px;
+    width: 100%;
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 80px;
   }
 
   .technologies__inner-header {
-    width: 280px;
+    width: 100%;
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 30px;
@@ -197,15 +197,14 @@
   .technologies__inner-description {
     font-size: 16px;
     line-height: 24px;
-    width: 280px;
   }
 
   .technologies__inner-block {
-    width: 280px;
+    width: 100%;
   }
 
   .technologies__table {
-    width: 280px;
+    width: 100%;
     border: none;
     background-color: transparent;
     padding: 0;
@@ -213,11 +212,12 @@
 
   .technologies__link-list {
     padding: 20px;
+    max-width: $mobile-middle-width;
   }
 
   .technologies__link-list-item {
     padding: 8px 0;
-    width: 80%;
+    width: 100%;
   }
 
   .technologies__table-header {
@@ -225,12 +225,18 @@
     line-height: 36px;
   }
 
+  .technologies__table-text {
+    width: 78px;
+  }
+
   .technologies__table-green-text {
     font-size: 48px;
+    margin-right: 7px;
   }
 
   .technologies__link-list-text {
     font-size: 22px;
     line-height: 30px;
+    text-align: left;
   }
 }

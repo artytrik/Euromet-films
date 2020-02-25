@@ -78,7 +78,7 @@
 @include mobile {
   .features__wrapper {
     padding: 30px 20px 24px;
-    width: $min-mobile-width;
+    max-width: $mobile-middle-width;
   }
 
   .features__header {
@@ -100,10 +100,16 @@
   .features__list-item-description {
     font-size: 16px;
     line-height: 24px;
+    width: 100%;
+    text-align: center;
   }
 
   .features__list-item-image-wrapper {
     margin-bottom: 20px;
     height: 217px;
+  }
+
+  .features__list-item-image-wrapper {
+    text-align: center;
   }
 }
