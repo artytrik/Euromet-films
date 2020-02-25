@@ -114,6 +114,7 @@
 
     @include back("../img/play.png");
     transition-duration: 1s;
+    background-size: cover;
   }
 
   cursor: pointer;
@@ -148,9 +149,10 @@
   width: 472px;
   height: 470px;
   top: 30%;
-  right: 10%;
+  right: 7%;
 
   @include back("../img/euro.png");
+  background-size: cover;
 }
 
 .intro__video-wrapper {
@@ -187,24 +189,25 @@
     margin-bottom: 35px;
   }
 
-  .intro__play-video-wrapper {
-    display: none;
+  .intro__play-video {
+    top: 46%;
+    right: 51%;
+    &::after {
+      width: 57px;
+      height: 57px;
+    }
+
+    &::before {
+      width: 97px;
+      height: 97px;
+    }
   }
 
-  .intro__video-wrapper {
-    position: absolute;
-
-    top: 35%;
-    right: 7%;
-
-    cursor: pointer;
-
-    &:hover {
-      &::after {
-        transform: translate(-50%, -50%) scale(1.2);
-        transition-duration: 1s;
-      }
-    }
+  .intro__play-video-wrapper {
+    top: 38%;
+    right: 10%;
+    width: 240px;
+    height: 240px;
   }
 
   .intro__list-item {
@@ -255,24 +258,16 @@
     margin-bottom: 30px;
   }
 
-  .intro__video {
-    width: 215px;
-    height: 215px;
+  .intro__video-wrapper {
+    width: 100%;
   }
 
-  .intro__video-wrapper {
-    position: static;
-    width: 220px;
+  .intro__play-video-wrapper {
+    position: relative;
     margin: 0 auto;
-    margin-bottom: 32px;
-
-    &::before {
-      transform: translate(-50%, -20%);
-    }
-
-    &::after {
-      transform: translate(-50%, 0);
-    }
+    top: 0;
+    right: 0;
+    margin-bottom: 30px;
   }
 
   .intro__list {
@@ -285,6 +280,7 @@
     margin-right: 0;
     margin: 0 auto;
     margin-bottom: 35px;
+    width: 100%;
 
     &:nth-child(2n) {
       margin: 0 auto;
