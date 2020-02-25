@@ -18,6 +18,15 @@
   @include font(19px, 300, 30px, #182430)
 }
 
+.about__video {
+  width: 100%;
+  height: 100%;
+
+  &--hide {
+    display: none;
+  }
+}
+
 .about__video-wrapper {
   position: relative;
   width: auto;
@@ -26,27 +35,19 @@
 
   @include back("../img/technologies.jpg");
   background-size: cover;
+}
 
-  &::before {
-    @include pseudo;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 190px;
-    height: 190px;
-
-    background-color: #16aeed;
-    border-radius: 50%;
-    opacity: 0.5;
-  }
+.about__play-video {
+  position: absolute;
+  border: none;
+  display: block;
+  background-color: transparent;
+  top: 45%;
+  right: 52%;
 
   &::after {
-    @include pseudo;
+    @include pseudo();
 
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 
     width: 113px;
@@ -54,6 +55,7 @@
 
     @include back("../img/play.png");
     transition-duration: 1s;
+    background-size: cover;
   }
 
   cursor: pointer;
@@ -64,14 +66,38 @@
       transition-duration: 1s;
     }
   }
-}
 
-.about__big-video-wrapper {
   &::before {
-    @include pseudo-top(472px, 470px, 53%, 51%);
+    @include pseudo;
+
     transform: translate(-50%, -50%);
 
-    @include back("../img/euro.png");
+    width: 190px;
+    height: 190px;
+
+    background-color: #16aeed;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.about__play-video-wrapper {
+  position: absolute;
+  width: 472px;
+  height: 470px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include back("../img/euro.png");
+  background-size: cover;
+
+  &--hide {
+    display: none;
   }
 }
 
@@ -87,6 +113,25 @@
   .about__video-wrapper {
     height: 414px;
     margin-top: 66px;
+  }
+
+  .about__play-video {
+    top: 46%;
+    right: 51%;
+    &::after {
+      width: 57px;
+      height: 57px;
+    }
+
+    &::before {
+      width: 97px;
+      height: 97px;
+    }
+  }
+
+  .about__play-video-wrapper {
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -120,5 +165,24 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 22px;
+  }
+
+  .about__play-video-wrapper {
+    width: 128px;
+    height: 128px;
+  }
+
+  .about__play-video {
+    top: 45%;
+    right: 48%;
+    &::after {
+      width: 31px;
+      height: 31px;
+    }
+
+    &::before {
+      width: 53px;
+      height: 53px;
+    }
   }
 }
