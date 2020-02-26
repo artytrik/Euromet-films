@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Euromet Films</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
   <header class="page-header page-header--inner">
@@ -135,27 +136,29 @@
     <section class="stages">
       <div class="stages__wrapper">
         <h2 class="stages__header">Этапы развития</h2>
-        <ul class="stages__list carousel">
-          <li class="stages__item">
-            <h3 class="stages__item-header">2006</h3>
-            <p class="stages__item-description">ЗАО «Еврометфилмз» –
-              современная динамичная компания,
-              реализующая полимерные
-              упаковочные материалы</p>
-          </li>
-          <li class="stages__item">
-            <h3 class="stages__item-header">2007</h3>
-            <p class="stages__item-description">Стратегическая цель ЗАО «Еврометфилмз» - максимальная гибкость в области поставок</p>
-          </li>
-          <li class="stages__item">
-            <h3 class="stages__item-header">2008</h3>
-            <p class="stages__item-description"> В первую очередь это действующая эффективная система клиентского сервиса и контроля качества</p>
-          </li>
-          <li class="stages__item">
-            <h3 class="stages__item-header">2009</h3>
-            <p class="stages__item-description">В первую очередь это действующая эффективная система клиентского сервиса и контроля качества</p>
-          </li>
-        </ul>
+        <div class="partners__swiper swiper-container">
+          <ul class="stages__list swiper-wrapper">
+            <li class="stages__item swiper-slide">
+              <h3 class="stages__item-header">2006</h3>
+              <p class="stages__item-description">ЗАО «Еврометфилмз» –
+                современная динамичная компания,
+                реализующая полимерные
+                упаковочные материалы</p>
+            </li>
+            <li class="stages__item swiper-slide">
+              <h3 class="stages__item-header">2007</h3>
+              <p class="stages__item-description">Стратегическая цель ЗАО «Еврометфилмз» - максимальная гибкость в области поставок</p>
+            </li>
+            <li class="stages__item swiper-slide">
+              <h3 class="stages__item-header">2008</h3>
+              <p class="stages__item-description"> В первую очередь это действующая эффективная система клиентского сервиса и контроля качества</p>
+            </li>
+            <li class="stages__item swiper-slide">
+              <h3 class="stages__item-header">2009</h3>
+              <p class="stages__item-description">В первую очередь это действующая эффективная система клиентского сервиса и контроля качества</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="about-contact">
@@ -248,11 +251,12 @@
   <div class="modal-overlay"></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/form.js"></script>
-  <script src="js/slider.js"></script>
   <script src="js/about-video.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 </html>
