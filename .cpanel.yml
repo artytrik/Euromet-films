@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/var/www/u0776125/public_html/euromet
+    - /bin/cp -R /var/www/u0776125/repositories/Euromet-Films/build/* $DEPLOYPATH
