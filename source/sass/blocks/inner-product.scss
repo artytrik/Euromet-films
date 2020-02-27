@@ -23,6 +23,7 @@
   }
 
   &__text-wrapper {
+    margin-top: -5px;
     width: 58%;
 
     @include tablet {
@@ -50,8 +51,7 @@
 
   &__description {
     margin: 0;
-    margin-top: -8px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 
     @include font(18px, 300, 30px, $black);
   }
@@ -82,7 +82,7 @@
 
   & h3 {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     @include font(24px, bold, 30px, $black);
   }

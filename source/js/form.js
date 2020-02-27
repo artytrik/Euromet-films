@@ -1,5 +1,5 @@
 $(function() {
-  document.querySelector(`.about-contact__form`).addEventListener('submit', function(evt){
+  document.querySelector(`.contacts-page__form`).addEventListener('submit', function(evt){
     var http = new XMLHttpRequest(), f = this;
     var th = $(this);
     evt.preventDefault();
