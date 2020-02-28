@@ -32,6 +32,11 @@
   color: $black;
   display: flex;
   flex-direction: column;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .catalog__image-wrapper {

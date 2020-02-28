@@ -36,6 +36,22 @@
     }
   }
 
+  &__text-wrapper-upper {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__text-wrapper-main {
+    width: 48%;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
   &__second-text-wrapper {
     width: 38%;
 
@@ -53,7 +69,7 @@
     margin: 0;
     margin-bottom: 18px;
 
-    @include font(18px, 300, 30px, $black);
+    @include font(16px, 300, 24px, $black);
   }
 
   &__list {
@@ -99,19 +115,50 @@
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     margin-bottom: 25px;
   }
 
   &__sizes-item {
+    position: relative;
     padding: 5px 10px;
-    margin-right: 2px;
-    border-radius: 100%;
+    margin-bottom: 10px;
+    margin-left: 30px;
 
-    @include font(18px, bold, 30px, #c3c3c3);
+    @include font(14px, normal, 30px, $black);
 
-    &--active {
-      background-color: $green;
-      color: #ffffff;
+    &::before {
+      @include pseudo;
+
+      width: 30px;
+      height: 40px;
+
+      top: 0;
+      left: -25px;
+    }
+
+    &--alluminium {
+      &::before {
+        background-color: #AAAAAA;
+      }
+    }
+
+    &--first {
+      &::before {
+        background-color: #659B4E;
+      }
+    }
+
+    &--second {
+      &::before {
+        background-color: #306519;
+      }
+    }
+
+    &--third {
+      &::before {
+        background-color: #97CD81;
+      }
     }
   }
 
@@ -132,16 +179,19 @@
     border-collapse: collapse;
     margin-bottom: 20px;
     width: 100%;
+    font-size: 14px;
 
     & th {
       background-color: $green;
       color: #ffffff;
       border: 1px solid $grey;
+      padding: 5px;
     }
 
     & td {
-      padding: 0.5%;
+      padding: 5px;
       border: 1px solid $grey;
+      text-align: center;
     }
 
     @include mobile {
