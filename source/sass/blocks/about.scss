@@ -67,6 +67,10 @@
     }
   }
 
+  &:active {
+    outline: none;
+  }
+
   &::before {
     @include pseudo;
 

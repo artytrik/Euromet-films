@@ -32,6 +32,12 @@
   height: 71px;
 }
 
+.page-header__logo-link {
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+}
+
 .page-header__description {
   margin: 0;
   margin-top: 25px;

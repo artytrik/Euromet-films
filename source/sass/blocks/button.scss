@@ -15,8 +15,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus,
-  &:active {
-    opacity: 0.9;
+  &:focus {
+    background-color: #458439;
   }
 }
