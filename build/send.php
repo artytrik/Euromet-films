@@ -5,8 +5,8 @@
   if (empty($_POST['call-name']))
     $errors['call-name'] = 'Name is required';
 
-  if (empty($_POST['call-telephone']))
-    $errors['call-telephone'] = 'Telephone is required';
+  if (empty($_POST['call-tel']))
+    $errors['call-tel'] = 'Telephone is required';
 
   if (!empty($errors)) {
     $data['success'] = false;
@@ -18,7 +18,7 @@
     $first_name = $_POST['call-name'];
     $subject = "Форма отправки сообщений с сайта M&N Agency";
     //$subject2 = "Copy of your form submission";
-    $message = $first_name . " оставил телефон:" . "\n\n" . $_POST['call-telephone'];
+    $message = $first_name . " оставил телефон:" . "\n\n" . $_POST['call-tel'];
     //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;

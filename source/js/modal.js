@@ -3,6 +3,7 @@ const modalCall = document.querySelector(`.modal-call`);
 const overlay = document.querySelector(`.modal-overlay`);
 const closeButton = modalCall.querySelector(`.modal-call__cross`);
 const modalSuccess = document.querySelector(`.modal-success`);
+const modalSuccessCross = modalSuccess.querySelector(`.modal-success__cross`);
 
 const onContactButtonClick = (evt) => {
   evt.preventDefault();
@@ -16,10 +17,11 @@ const onCloseButtonClick = (evt) => {
 
   modalCall.classList.remove(`modal-call--show`);
   overlay.classList.remove(`modal-overlay--show`);
+  modalSuccess.classList.remove('modal-success__opened');
 };
 
 const onSendSuccess = () => {
-  modalCall.classList.remove('modal__opened');
+  modalCall.classList.remove('modal-call--show');
   modalSuccess.classList.add('modal-success__opened');
 };
 
@@ -29,6 +31,7 @@ contactButtons.forEach((button) => {
 
 closeButton.addEventListener(`click`, onCloseButtonClick);
 overlay.addEventListener(`click`, onCloseButtonClick);
+modalSuccessCross.addEventListener(`click`, onCloseButtonClick);
 
 $("#form").submit(function (e) { // Устанавливаем событие отправки для формы с id=form
   e.preventDefault();
