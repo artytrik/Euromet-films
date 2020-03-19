@@ -2,11 +2,11 @@
 
 var Map = function Map() {
   var myMap = new ymaps.Map("map", {
-    center: [55.780319, 37.632098],
+    center: [55.767473, 37.632682],
     zoom: 18,
-    controls: []
+    controls: ["zoomControl"]
   });
-  var myPlacemark = new ymaps.Placemark([55.780406, 37.632287], null, {
+  var myPlacemark = new ymaps.Placemark([55.767473, 37.632682], null, {
     iconLayout: 'default#image',
     iconImageHref: "img/pin.png",
     iconImageSize: [40, 57]
