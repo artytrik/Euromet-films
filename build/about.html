@@ -168,10 +168,10 @@
           <p class="about-contact__description">Производственная площадка расположена в г. Ступино,
             в 80 км к югу от Москвы, вблизи автомагистралей и железнодорожных путей, что значительно упрощает логистические задачи по доставке продукции
             о все регионы РФ и ближнего зарубежья. </p>
-          <form method="POST" class="about-contact__form">
-            <input type="text" name="call-name" id="about-call-name" class="about-contact__input about-contact__element" placeholder="Ваше имя">
+          <form method="POST" id="about-form" class="about-contact__form">
+            <input type="text" name="call-name" id="about-call-name" class="about-contact__input about-contact__element" placeholder="Ваше имя" required="">
             <label for="call-name" class="visually-hidden">Ваше имя</label>
-            <input type="tel" name="call-tel" id="about-call-tel" class="about-contact__input about-contact__element" placeholder="Ваш телефон">
+            <input type="tel" name="call-tel" id="about-call-tel" class="about-contact__input about-contact__element" placeholder="Ваш телефон" required="">
             <label for="call-tel" class="visually-hidden">Ваш телефон</label>
             <button type="button" class="button about-contact__button about-contact__element">Связаться с нами</button>
           </form>
@@ -258,10 +258,10 @@
   </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
   <script src="js/index.js"></script>
   <script src="js/modal.js"></script>
-  <!--<script src="js/form.js"></script>-->
-  <script src="js/about-video.js"></script>
+  <script src="js/about.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/swiper.js"></script>

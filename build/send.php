@@ -12,8 +12,8 @@
     $data['success'] = false;
     $data['errors'] = $errors;
   } else {
-    $to = "mail@euromet.m-n.agency";;
-    $from = "mail@euromet.m-n.agency";
+    $to = "tema-luch@mail.ru";
+    $from = "info-em@eurometfilms.ru";
 
     $first_name = $_POST['call-name'];
     $subject = "Форма отправки сообщений с сайта Euromet Films";

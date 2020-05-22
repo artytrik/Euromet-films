@@ -2,6 +2,7 @@
 
 var contactButtons = document.querySelectorAll(".contacts__button");
 var modalCall = document.querySelector(".modal-call");
+var modalInput = modalCall.querySelectorAll('.modal-call__input');
 var overlay = document.querySelector(".modal-overlay");
 var closeButton = modalCall.querySelector(".modal-call__cross");
 var modalSuccess = document.querySelector(".modal-success");
@@ -15,6 +16,9 @@ var onContactButtonClick = function onContactButtonClick(evt) {
 
 var onCloseButtonClick = function onCloseButtonClick(evt) {
   evt.preventDefault();
+  modalInput.forEach(function (input) {
+    return input.value = "";
+  });
   modalCall.classList.remove("modal-call--show");
   overlay.classList.remove("modal-overlay--show");
   modalSuccess.classList.remove('modal-success__opened');

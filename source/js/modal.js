@@ -1,5 +1,6 @@
 const contactButtons = document.querySelectorAll(`.contacts__button`)
 const modalCall = document.querySelector(`.modal-call`);
+const modalInput = modalCall.querySelectorAll('.modal-call__input');
 const overlay = document.querySelector(`.modal-overlay`);
 const closeButton = modalCall.querySelector(`.modal-call__cross`);
 const modalSuccess = document.querySelector(`.modal-success`);
@@ -15,6 +16,7 @@ const onContactButtonClick = (evt) => {
 const onCloseButtonClick = (evt) => {
   evt.preventDefault();
 
+  modalInput.forEach((input) => input.value = "");
   modalCall.classList.remove(`modal-call--show`);
   overlay.classList.remove(`modal-overlay--show`);
   modalSuccess.classList.remove('modal-success__opened');

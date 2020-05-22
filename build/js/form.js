@@ -1,5 +1,8 @@
 "use strict";
 
+$(document).ready(function () {
+  $("#form-telephone").mask("+7 (999) 999-9999");
+});
 $(function () {
   document.querySelector(".contacts-page__form").addEventListener('submit', function (evt) {
     var http = new XMLHttpRequest(),
