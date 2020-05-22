@@ -12,7 +12,7 @@
     $data['success'] = false;
     $data['errors'] = $errors;
   } else {
-    $to = "tema-luch@mail.ru";
+    $to = "info-em@eurometfilms.ru";
     $from = "info-em@eurometfilms.ru";
 
     $first_name = $_POST['call-name'];
