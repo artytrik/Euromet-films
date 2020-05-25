@@ -5,7 +5,7 @@
 .clients__wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 19px 70px;
+  padding: 0 1%;
   overflow: hidden;
   position: relative;
 }
@@ -14,12 +14,27 @@
   @include clear-ul;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  &-item {
+    margin-right: 4%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .clients__list-item-image-wrapper {
-  height: 50px;
   width: 152px;
+  height: 80px;
+  position: relative;
+
+  & img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .clients__control {
@@ -72,8 +87,11 @@
 
 @include mobile {
   .clients__wrapper {
-    padding: 19px 40px;
     max-width: $mobile-middle-width;
     box-sizing: border-box;
+  }
+
+  .clients__list-item-image-wrapper {
+    width: 120px;
   }
 }
