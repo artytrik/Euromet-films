@@ -179,6 +179,10 @@
 }
 
 @include tablet {
+  .intro {
+    background-size: auto;
+  }
+
   .intro__wrapper {
     padding: 250px 70px 85px;
   }
